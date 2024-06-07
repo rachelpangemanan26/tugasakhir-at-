@@ -1,26 +1,26 @@
 public:
-- about.php
-- daftar.php
-- index.php
-- login.php
-- logout.php
-- proses_daftar.php
-- proses_login.php
-- functions.php
-- db_config.php
+about.php
+daftar.php
+index.php
+login.php
+logout.php
+proses_daftar.php
+proses_login.php
+functions.php
+db_config.php
 admin:
-- add_book.php
-- dashboard.php
-- delete_book.php
-- edit_book.php
-- status_peminjaman.php
-- manage_books.php
+add_book.php
+dashboard.php
+delete_book.php
+edit_book.php
+status_peminjaman.php
+manage_books.php
 member:
-- borrow_books.php
-- proses_pinjam.php
-- dashboard.php
-- database library tables:
--| books | CREATE TABLE `books` (
+borrow_books.php
+proses_pinjam.php
+dashboard.php
+database library tables:
+CREATE TABLE `books'
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `author` varchar(100) NOT NULL,
@@ -30,8 +30,8 @@ member:
   `cover_image` varchar(255) DEFAULT NULL,
   `quantity` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci |
--| borrowings | CREATE TABLE `borrowings` (
+
+CREATE TABLE `borrowings`
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `book_id` int(11) NOT NULL,
@@ -42,8 +42,8 @@ member:
   KEY `book_id` (`book_id`),
   CONSTRAINT `borrowings_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   CONSTRAINT `borrowings_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci |
--| users | CREATE TABLE `users` (
+
+CREATE TABLE `users`
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
@@ -51,4 +51,3 @@ member:
   `role` enum('admin','member') DEFAULT 'member',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci |
