@@ -4,10 +4,13 @@ daftar.php
 index.php
 login.php
 logout.php
+
+fungsi:
 proses_daftar.php
 proses_login.php
 functions.php
 db_config.php
+
 admin:
 add_book.php
 dashboard.php
@@ -15,11 +18,14 @@ delete_book.php
 edit_book.php
 status_peminjaman.php
 manage_books.php
+
 member:
 borrow_books.php
 proses_pinjam.php
 dashboard.php
-database library tables:
+
+database library:
+
 CREATE TABLE `books'
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
